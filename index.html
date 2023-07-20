@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>万花筒</title>
+    <!-- <script type="text/javascript">
+        var Random = Math.floor(Math.random()*1001)
+        alert("请输入密码")
+        alert("提示：密码为一个0到1000之间的整数")
+
+        for (var i = 1; ; i++ ) {
+            var val = prompt("第"+i+"次输入,请输入一个整形数字")
+            if (isNaN(val) || val > 1000 || val < 0) {
+                alert("输入无效，憨批")
+            } else {
+                if (val < Random) {
+                    alert("太小了，请再猜一次吧。")
+                } else if (val > Random) {
+                    alert("太大了，请再猜一次吧。")
+                } else if (val == Random) {
+                    alert("恭喜你猜对了，你太棒了，这个数就是"+val)
+                    alert('欢迎来到属于你的万花筒')
+                    break
+                }
+            }
+        }
+        </script> -->
+</head>
+<style>
+body{
+    background-color:black;
+}
+#box{
+    position: relative;
+    width: 200px;
+    height: 300px;
+    /* background-color: aqua; */
+    margin: 150px auto 0 auto ;
+    transform-style: preserve-3d;
+    transform: rotatex(-20deg);
+    animation: Changing   10s   infinite  linear
+  /* 绑定定位    名称     速度  无线循环     匀速    */
+}
+
+#region{
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    /* background-color: blueviolet; */
+}
+#region:nth-of-type(1)/*选中region下的第一个兄弟元素*/{ 
+    transform: rotatey(0deg) translatez(275px); 
+    /*变形/变化  旋转  度数  Z Y X 轴，默认Z*/    /*沿着z轴3D 从新定位*/
+}
+#region:nth-of-type(2){ 
+    transform: rotatey(40deg) translatez(275px); 
+    /*变形/变化  旋转  度数  Z Y X 轴，默认Z*/    /*沿着z轴3D 从新定位*/
+}
+#region:nth-of-type(3){ 
+    transform: rotatey(80deg) translatez(275px); 
+    /*变形/变化  旋转  度数  Z Y X 轴，默认Z*/    /*沿着z轴3D 从新定位*/
+}
+#region:nth-of-type(4){ 
+    transform: rotatey(120deg) translatez(275px); 
+    /*变形/变化  旋转  度数  Z Y X 轴，默认Z*/    /*沿着z轴3D 从新定位*/
+}
+#region:nth-of-type(5){ 
+    transform: rotatey(160deg) translatez(275px); 
+    /*变形/变化  旋转  度数  Z Y X 轴，默认Z*/    /*沿着z轴3D 从新定位*/
+}
+#region:nth-of-type(6){ 
+    transform: rotatey(200deg) translatez(275px); 
+    /*变形/变化  旋转  度数  Z Y X 轴，默认Z*/    /*沿着z轴3D 从新定位*/
+}
+#region:nth-of-type(7){ 
+    transform: rotatey(240deg) translatez(275px); 
+    /*变形/变化  旋转  度数  Z Y X 轴，默认Z*/    /*沿着z轴3D 从新定位*/
+}
+#region:nth-of-type(8){ 
+    transform: rotatey(280deg) translatez(275px); 
+    /*变形/变化  旋转  度数  Z Y X 轴，默认Z*/    /*沿着z轴3D 从新定位*/
+}
+#region:nth-of-type(9){ 
+    transform: rotatey(320deg) translatez(275px); 
+    /*变形/变化  旋转  度数  Z Y X 轴，默认Z*/    /*沿着z轴3D 从新定位*/
+}
+img{
+    width: 200px;
+    height: 300px;
+}
+/* 创建动画   动画名称    */
+@keyframes Changing{
+0%{ /*开始*/
+    transform: rotatex(-20deg)  rotateY(0deg);
+}
+100%{ /*结束*/
+    transform:  rotatex(-20deg)  rotateY(360deg);
+}
+
+}   
+</style>
+
+<body>
+    <div id="box">
+        <div id="region">
+           <img src="./img/1.jpg" alt="">
+        </div>
+        <div id="region">
+            <img src="./img/2.jpg" alt="">
+         </div>
+         <div id="region">
+            <img src="./img/3.jpg" alt="">
+         </div>
+         <div id="region">
+            <img src="./img/4.jpg" alt="">
+         </div>
+         <div id="region">
+            <img src="./img/5.jpg" alt="">
+         </div>
+         <div id="region">
+            <img src="./img/6.jpg" alt="">
+         </div>
+         <div id="region">
+            <img src="./img/7.jpg" alt="">
+         </div>
+         <div id="region">
+            <img src="./img/8.jpg" alt="">
+         </div>
+         <div id="region">
+            <img src="./img/9.jpg" alt="">
+         </div>
+    </div>
+
+</body>
+</html>
